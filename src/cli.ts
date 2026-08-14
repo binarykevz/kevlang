@@ -107,6 +107,10 @@ async function runFile(file: string | undefined, flags: string[]): Promise<void>
       console.log("");
       console.log("✓ Reaction complete");
     }
+    if (runtime.backend.started) {
+      // Keep the CLI process alive so the HTTP server doesn't shut down
+      await new Promise(() => {});
+    }
   } catch (err) {
     console.error(formatKevError(err, source));
     process.exitCode = 1;

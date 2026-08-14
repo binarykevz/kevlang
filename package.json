@@ -1,5 +1,5 @@
 {
-  "name": "@kevz_mnl/kevlang",
+  "name": "@itskevz/kevlang",
   "version": "1.0.0",
   "description": "A chemistry and food-engineering inspired programming language with Bun backend support.",
   "type": "module",

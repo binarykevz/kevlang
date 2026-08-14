@@ -1,0 +1,17 @@
+⚗ KevLang Backend
+
+ƒ hello(📥) → 🧬 {
+  message ← "Hello from KevLang"
+  path ← 📥.path
+  method ← 📥.method
+  time ← 15d
+}
+
+GET "/" → 🧪 "KevLang backend running"
+GET "/hello" → hello
+GET "/user/:id" → 🧬 { userId ← params.id, query ← query }
+POST "/echo" → body
+GET "/array" → [1, 2, 3, "KevLang"]
+GET "/teapot" → 📤("I am a teapot", 418)
+
+⚡ 3000

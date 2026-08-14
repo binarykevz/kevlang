@@ -6,6 +6,8 @@ declare const Request: any;
 declare const Response: any;
 declare const URL: any;
 declare const Headers: any;
+declare const TextDecoder: any;
+declare const TextEncoder: any;
 
 declare function setTimeout(
   handler: (...args: any[]) => void,

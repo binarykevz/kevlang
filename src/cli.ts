@@ -102,8 +102,12 @@ async function runFile(file: string | undefined, flags: string[]): Promise<void>
     });
 
     await runtime.execute(source);
-
-    if (animation && !runtime.backend.started) {
+  
+    if (runtime.backend.started) {
+      console.log("🟢 Server is running. Press Ctrl+C to stop.");
+      // Keep the process alive forever so the server doesn't shut down
+      setInterval(() => {}, 1000);
+    } else if (animation) {
       console.log("");
       console.log("✓ Reaction complete");
     }

@@ -1,0 +1,51 @@
+{
+  "name": "kevlang",
+  "version": "1.0.0",
+  "description": "A chemistry and food-engineering inspired programming language with Bun backend support.",
+  "type": "module",
+  "bin": {
+    "kev": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "bun run clean && tsc",
+    "dev": "bun src/cli.ts",
+    "test": "bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "chemistry",
+    "food-engineering",
+    "dsl",
+    "language",
+    "compiler",
+    "bun",
+    "backend",
+    "kevlang"
+  ],
+  "license": "MIT",
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}

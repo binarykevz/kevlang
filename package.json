@@ -21,9 +21,9 @@
     "README.md",
     "LICENSE"
   ],
-  "scripts": {
+    "scripts": {
     "clean": "rm -rf dist",
-    "build": "bun run clean && tsc",
+    "build": "bun run clean && tsc && chmod +x dist/cli.js",
     "dev": "bun src/cli.ts",
     "test": "bun test",
     "prepublishOnly": "bun run build"

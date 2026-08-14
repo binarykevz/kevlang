@@ -83,6 +83,7 @@ export class Backend {
 
     this.server = g.Bun.serve({
       port,
+      hostname: "0.0.0.0",
       fetch: async (request: any) => {
         return this.handle(request, runtime);
       }
